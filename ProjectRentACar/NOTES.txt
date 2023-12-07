@@ -1,0 +1,108 @@
+
+
+
+
+
+$stmt = $dbh->prepare('SELECT * FROM Customer WHERE email=?');
+$stmt->execute(array($email));
+$customer = $stmt->fetchAll();
+
+
+
+ <?php
+session_start();
+
+$dbh = new PDO('sqlite:./db/rental_db.sqlite');
+$dbh->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$email = $_POST['email'];
+$password = $_POST['password'];
+$vpassword = $_POST['vpassword'];
+$name = $_POST['name'];
+$age = $_POST['age'];
+$address = $_POST['address'];
+$tax_number = $_POST['tax_number'];
+$contact = $_POST['contact'];
+$card_number = $_POST['card_number'];
+$license_number = $_POST['license_number'];
+$type = $_POST['type'];
+$expiring_date = $_POST['expiring_date'];
+
+
+
+function insertUser(
+  $email,
+  $password,
+  $vpassword
+) {
+  global $dbh;
+
+  $stmt = $dbh->prepare('INSERT INTO Customer ( name, email, contact, tax_number, address, age, password) VALUES(?, ?, ?, ?, ?, ?, ?)');
+  $stmt->execute(array($name, $email, $contact, $tax_number, $address, $age, $password));
+
+
+  $get_id = $dbh->prepare('SELECT MAX(id_customer) FROM Customer?');
+  $get_id->execute();
+  $id_customer = $get_id->fetch();
+
+  $stmt2 = $dbh->prepare('INSERT INTO DriveingLicense ( license_number, type, expiring_date, id_customer) VALUES(?, ?, ?, ?, ?, ?, ?)');
+  $stmt2->execute(array($license_number, $type, $expiring_date, $id_customer));
+}
+/*(strlen($email) < 1) {
+  $_SESSION["msg"] = "Invalid username!";
+  header("Location: register.php");
+  die();
+}
+
+if (strlen($password) < 4) {
+  $_SESSION["msg"] = "Password must have at least 4 characters.";
+  header("Location: register.php");
+  die();
+}
+
+if (strlen($name) < 2) {
+  $_SESSION["msg"] = "Invalid name.";
+  header("Location: register.php");
+  die();
+}
+
+if (strlen($tax_number) < 6) {
+  $_SESSION["msg"] = "Tax number must have 6 or more digits.";
+  header("Location: register.php");
+  die();
+}
+
+if (strlen($age) < 18) {
+  $_SESSION["msg"] = "You must be 18 or older to have an account";
+  header("Location: register.php");
+  die();
+}*/
+
+try {
+  insertUser(
+    $email,
+    $password,
+    $vpassword,
+    $name,
+    $age,
+    $address,
+    $tax_number,
+    $contact,
+    $card_number,
+    $license_number,
+    $type,
+    $expiring_date
+  ); 
+  $_SESSION["msg"] = "Registration successful!";
+  header('Location: login.php');
+} catch (PDOException $e) {
+  $err_msg = $e->getMessage();
+
+  if (strpos($err_msg, "UNIQUE")) {
+    $_SESSION["msg"] = "Username already exists!";
+  } else {
+    $_SESSION["msg"] = "Registration failed! ($err_msg)";
+  }
+  header("Location: register.php");
+}

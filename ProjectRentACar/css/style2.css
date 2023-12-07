@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  color: rgb(227, 199, 122);
+  background: #fff;
+}
+
+.content {
+  margin: auto;
+  max-width: 1000px;
+  padding-top: 80px;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  background: #1b1b1b;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 12;
+}
+
+nav .menu {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  top: 0;
+}
+
+.menu .logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.menu ul {
+  display: inline-flex;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-left: 7px;
+}
+
+.menu ul li:first-child {
+  margin-left: 0px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:hover {
+  background: #fff;
+  color: black;
+}
+
+.img_home {
+  background: url('../imgs/car_center.jpg')no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.img_home::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.center_home {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.center_home .title {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.center_home .sub_title {
+  color: #fff;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+.center_home .center_btn {
+  align-items: baseline;
+}
+
+.center_home .center_btn button {
+  align-self: center;
+  height: 55px;
+  width: 170px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 10px;
+  border: 2px solid rgb(245, 245, 245);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+.center_btn button:hover {
+  background-color: #78b09c;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.center_btn a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  color: #000000;
+
+
+
+  border: 2px solid rgb(245, 176, 65);
+  border: 2px solid rgb(29, 52, 2);
+
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Car fleet*/
+
+
+
+/* Home page rows */
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  padding: 50px;
+
+}
+
+.titles {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #1b1b1b;
+  ;
+}
+
+#reservation_marketing {
+  margin: 0 auto;
+  align-items: center;
+  width: fit-content;
+}
+
+.reservation_marketing_column {
+  align-content: center;
+  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  ;
+}
+
+
+
+
+#reservation {
+  width: 50%;
+  align-content: center;
+  padding: 5px;
+  background-color: #04AA6D;
+  border-radius: 16px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 40px;
+
+
+}
+
+.column_reservation {
+  align-items: center;
+  height: 100%;
+  display: inline-block;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  align-items: center;
+  margin: 0 auto;
+  margin: 2px;
+}
+
+.column_reservation select {
+  border-radius: 10px;
+  border-color: antiquewhite;
+
+}
+
+.column_reservation input {
+  background: #fff;
+}
+
+.column_reservation input:hover {
+  background: #fff;
+}
+
+#search_button {
+  margin: 0 auto;
+  align-items: center;
+  display: inline-block;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin: 2px;
+  transition: all 0.3s ease;
+  background-color: #bc2828;
+}
+
+#search_button a {
+
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+#search_button:hover {
+
+  background-color: #78b09c;
+  color: rgb(0, 0, 0);
+
+}
+
+
+
+#login h1 {
+  text-align: center;
+}
+
+
+/*  FAQs */
+
+#FAQS {
+  padding: 5px;
+
+}
+
+#FAQS .maindiv {
+  background-color: rgb(87, 52, 52);
+  padding: 10px
+}
+
+.maindiv div {
+  padding: 10px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+
+}
+
+
+.maindiv ul {
+
+  border-radius: 16px;
+  text-indent: 1em;
+  box-shadow: #f1f1f1;
+  padding: 12px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  margin-bottom: 20px;
+  border-top-width: 5px;
+  border-top-style: solid;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  border-top-color: rgb(176, 48, 48);
+  border-bottom-color: rgb(176, 48, 48);
+
+}
+
+.maindiv li {
+  margin-left: 3em;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  margin: 2em auto;
+  padding: 2em;
+}
+
+label {
+  padding-bottom: 6px;
+  padding-top: 15px;
+  padding-left: 7px;
+}
+
+label,
+input {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+}
+
+
+
+input[type=submit]:hover {
+
+  width: auto;
+  background-color: rgb(186, 186, 186);
+  color: rgb(0, 0, 0);
+
+  border: none;
+  margin: 1em;
+  padding: 1em;
+  margin-left: auto;
+
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #046dd5;
+}
+
+footer {
+  padding: 10px 10px 1px 10px;
+  width: 100%;
+  /* Height of the footer*/
+  height: 30px;
+  color: aliceblue;
+  background: #1b1b1b;
+  text-align: center;
+  display: block;
+  height: 50%;
+}
+
+
+/* Create three equal columns that sits next to each other */
+
+
+
+#car {
+  align-items: center;
+  width: 50%;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(179, 179, 179);
+}
+
+#car img {margin-top: 30px;
+  height: 120px;
+  width: 200px;
+
+}
+
+#car .ref {
+  align-self: center;
+  margin: 2px 10px 10px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease;
+  background-color: #000000;
+  display: table;
+}
+
+#car button  {
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease;
+  background-color: #bc2828;
+  display: table;
+}
+
+
+#car button:hover {
+  background-color: #78b09c;
+}
+
+#car_infos select {
+  float: right;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+#car_infos .car_class {
+  float: left;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+
+#car_infos {
+  align-items: center;
+  height: 100%;
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 16px;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+#car_infos form{
+  align-items: center;
+}
+
+
+/*  For the register page  */
+
+.register_form {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #04AA6D;
+  border-radius: 26px;
+}
+
+.register_form h1 {
+  padding-bottom: 40px;
+}
+
+.register_form h3 {
+  text-decoration: underline rgb(0, 0, 0) 3px;
+}
+
+/* Full-width input fields */
+input {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input:focus {
+  background-color: rgb(131, 131, 131);
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 20px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #bc2828;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+
+  background-color: #78b09c;
+}
+
+/* Add a blue text color to links */
+.container signin a {
+  color: dodgerblue;
+}
+
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/*LOGIN PAGE */
+
+
+.register_form img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  margin-bottom: 80px;
+
+}
+
+/* MANAGE RESERVATION */
+
+
+table {
+  font-family: arial, sans-serif;
+  font-size:small;
+  border-collapse: collapse;
+  height: 50%;
+  padding: 10px;
+}
+
+
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.content .reservations_table {
+  padding-bottom: 50px;
+    width: 1000px;
+    height: 500px;
+    overflow: scroll;
+}
+
+
+.content .reservations_table th,td {
+  text-align: center;
+  border: 1px solid #a99e9e;
+  padding: 8px;
+}
+
+.content .reservations_table tr:hover {
+  background-color: rgb(153, 151, 151);
+}
+
+.content .reservations_table th {
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04AA6D;
+  color: white;
+
+}
+
+/* payment */
+
+/* payment */ 
+
+
+
+
+
+/* tabela para escolher os seguros*/ 
+.assurance {
+  width: 625px;
+  background: #fafafa none repeat scroll 0 0;
+  border-collapse: separate;
+  margin-bottom: 10px;
+}
+.assurance {
+  display: table;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 5px;
+  border-color:green;
+}
+
+.cabecalho th {
+  height: 70px;
+  font-family:Verdana;
+  background: #04AA6D no-repeat scroll center bottom;
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+.Price th {
+
+  background: #e2e2e2 url(/files/live/sites/Europcar/files/dc_images/backgrounds/extras_arrowdown.png) no-repeat scroll center bottom;
+  border-right: medium none;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 0 25px;
+  text-align: center;
+  vertical-align: middle;
+  width: 119px;
+
+  padding-left: 5px;
+  padding-right: 20px;
+
+}
+.Price td{
+   font-weight: bold;
+}
+
+.Details th {
+
+  background: #e2e2e2 url(/files/live/sites/Europcar/files/dc_images/backgrounds/extras_arrowdown.png) no-repeat scroll center bottom;
+  border-right: medium none;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 0 25px;
+  text-align: center;
+  vertical-align: middle;
+  width: 119px;
+  font-weight:normal;
+
+  padding-left: 0px;
+  padding-right: 20px;
+
+}
+td {
+
+  text-align: center;
+  display: table-cell
+
+}
+.Details td {
+
+background-color: white;
+
+}
+
+.Details img{
+  width: 35px;
+  aspect-ratio: auto 35 / 35;
+  height: 35px;
+}
+.Details i{
+  font-size: 1.8em;
+  margin-left: 0;
+  margin-right: auto;
+  vertical-align:middle;
+  text-align: left;
+}
+.Details span{
+  vertical-align:middle;
+  text-align: center;
+  font-weight:normal;
+  font-size: 14px;
+  padding-left: 10px;
+  width: 150px ;
+}
+
+.yes i{
+  font-size: 1.8em;
+  color: green
+}
+.not i{
+  font-size: 1.8em;
+  color: red
+}
+
+.Details .thbreak{
+background: #e2e2e2 url(/files/live/sites/Europcar/files/dc_images/backgrounds/extras_arrowdown.png) no-repeat scroll center bottom;
+border-collapse: collapse;
+border-left:0;
+border-left-width:0;
+border-left-color:#e2e2e2;
+
+}
+.check_out{
+background: #e2e2e2;
+margin-right:100px ;
+padding-left: 20px;
+margin-right:120px;
+width:fit-content ;
+border: 1px solid black;
+
+}
+
+.choosen_car {
+  width: 190px;
+  height:135px;
+  border: 5px solid green;
+  padding:5px 5px 5px;
+  background: white;
+  margin-left: 25px;
+  
+}
+.choosen_car img{
+  width: 180px;
+  height: 120px;
+
+}
+
+
+.total_price_box{
+  
+  border: 2px solid green;
+  font-size: 1.8em;
+  color: rgb(15, 1, 1);
+  background: white;
+  text-align: center;
+  border-radius: 14px;
+  margin: 20px;
+  
+
+}
+.information_Review{
+  width: 50%;
+  padding: 5px;
+  background-color: rgb(255, 212, 127);
+  border-radius: 16px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 40px;
+
+}
+.information-costs{
+  background-color: whitesmoke;
+  margin-top:0;
+  margin-bottom: 0;
+  margin-left: 30%;
+  text-align: center;
+  width: 40%;
+  padding: 0;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #1b1b1b;
+  
+
+}
+
+.button_pay{
+  margin: 0 auto;
+  align-items: center;
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: #fff;
+  border-radius: 16px;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  margin: 2px;
+  transition: all 0.3s ease;
+  background-color: #bc2828;
+  font-size: 20px;
+
+}
+.button_pay:hover {
+background-color: rgb(0, 181, 115);
+color: rgb(0, 0, 0);
+}
